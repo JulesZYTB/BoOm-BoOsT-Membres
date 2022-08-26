@@ -590,6 +590,7 @@ while True:
 
     tools = input("""
 
+    Discord Account Creator BoOm-BoOsT, Par .^JuledZ^.#0001
     1. Token Generator/Member Botter/Token Creator
 
     2. Check Capmonster Balance
